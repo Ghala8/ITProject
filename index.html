@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+  <meta charset="UTF-8">
+  <title>Home - UniSlots</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3e5f3;
+      color: #483754;
+      padding-top: 80px; 
+    }
+
+    nav {
+      background-color: #d16ba5;
+      width: 100%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+   nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: #9284b5;
+    }
+
+    .home-container {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .home-container img {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+
+    .home-container h1 {
+      font-size: 32px;
+      color: #5e4b8b;
+      margin-bottom: 10px;
+    }
+
+    .home-container p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="home-container">
+    <img src="logo.png" alt="UniSlots Logo">
+    <h1>Welcome to UniSlots</h1>
+    <p>
+      Your smart scheduling assistant for organizing appointments with your university instructors.
+      Book your slot, stay on track, and make the most of your academic journey!
+    </p>
+  </div>
+
+  <div style="text-align: center; margin-top: 30px;">
+  <a href="https://edugate.tu.edu.sa" target="_blank" 
+     style="background-color: #d16ba5; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+    Taif University
+  </a>
+</div>
+
+  <!-- Footer -->
+  <footer style="  text-align: center;
+      margin-top: 60px;
+      padding: 10px;
+      color: #777;
+      font-size: 14px;">
+    <p id="datetime"></p>
+  </footer>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      };
+      document.getElementById("datetime").textContent =
+        'Current date and time: ' + now.toLocaleString('en-US', options);
+    }
+
+    window.onload = updateDateTime;
+    setInterval(updateDateTime, 60000);
+  </script>
+
+</body>
+</html>

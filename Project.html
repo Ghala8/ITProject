@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title> UniSlots Booking </title>
+    
+    <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3e5f3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .FormTitle {
+      font-size: 20px;
+      color: #5e4b8b;
+      font-weight: bold;
+    }
+
+    .Form {
+      max-height: 0;
+      opacity: 0;
+ 
+      transition: all 0.5s ease;
+    }
+
+    button {
+      background-color: #d16ba5;
+      color: white;
+    }
+
+    input, button {
+      width: 90%;
+      padding: 8px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .FormBox {
+      background-color: white;
+      width: 400px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      text-align: center;
+      transition: height 0.4s ease, padding 0.3s ease;
+      position: relative;
+    }
+
+    .FormBox:hover .Form {
+      max-height: 1000px;
+      opacity: 1;
+      padding-top: 20px;
+    }
+
+    button:hover {
+      background-color: #c05b9a;
+    }
+
+    img {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    </style>
+
+   </head>
+
+   <body>
+
+    <div class = "FormBox">
+
+      <img src = "Logo Unislots.PNG" alt = "UniSlots Logo">
+      <div class = "FormTitle"> Booking </div>
+      <div class = "Form">
+       
+        <form>
+
+          <input type = "text" placeholder = "Name" required>
+          <input type = "text" placeholder = "Student ID" required>
+          <input type = "email" placeholder = "Email" required>
+          <input type = "date" required>
+          <input type = "time" required>
+
+          <button type="submit"> Submit </button>
+
+        </form>
+      
+      </div>
+
+    </div>
+
+   </body>
+
+
+</html>

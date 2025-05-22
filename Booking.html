@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3e5f3;
+      display: flex; /* Make the body a flexbox contanier */
+      justify-content: center; 
+      align-items: center;
+      height: 100vh;
+      padding-top: 60px;
+    }
+
+    .FormTitle {
+      font-size: 20px;
+      color: #5e4b8b;
+      font-weight: bold;
+    }
+
+    .Form {
+      max-height: 0;
+      opacity: 0;
+      transition: all 0.5s ease; /* For animation */
+    }
+
+    input, button {
+      width: 90%;
+      padding: 8px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .FormBox {
+      background-color: white;
+      width: 400px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      text-align: center;
+      /* To animation so the hight and padding will be changing */
+      transition: height 0.4s ease, padding 0.3s ease;
+    }
+
+    .FormBox:hover .Form {
+      max-height: 1000px;
+      opacity: 1;
+      padding-top: 20px;
+    }
+
+    button:hover {
+      background-color: #c05b9a;
+    }
+
+    img {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     background-color:  #d16ba5;
+     padding: 10px 0;
+     z-index: 1000;
+   }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+    }
+
+    nav a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #9284b5; 
+    }
+
+    </style>
+    <link rel ="stylesheet" href="StyleCode.css">
+   </head>
+
+   <body>
+    <header>
+       <nav>
+         <ul>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="schedule.html">Schedule</a></li>
+           <li><a href="booking.html">Booking</a></li>
+           <li><a href="faq.html">FAQ</a></li>
+           <li><a href="contact.html">Contact</a></li>
+         </ul>
+       </nav>
+     </header>
+
+    <div class = "FormBox">
+
+      <img src = "logo.png" alt = "UniSlots Logo">
+      <div class = "FormTitle"> Booking </div>
+      <div class = "Form">
+       
+      
+        <form action="confirmation.php" method="post">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="id" placeholder="Student ID" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="date" name="date" required>
+            <input type="time" name="time" required>
+            <button type="submit">Submit</button>
+
+        </form>
+      </div>
+    </div>
+   </body>
+</html>
